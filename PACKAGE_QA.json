@@ -1,0 +1,241 @@
+{
+  "status": "passed_with_runtime_limitations",
+  "date": "2026-10-03",
+  "python_syntax_files": 67,
+  "json_files_parsed": 21,
+  "cpu_tests": {
+    "passed": 15,
+    "failed": 0,
+    "seconds": 6.921,
+    "scope": "Full-size synthetic COCO annotations, real VOC lists/tags, dataset loader, losses, evaluation arithmetic, paths, configuration and disk-backed storage"
+  },
+  "dry_run_command_count": 18,
+  "dry_run_commands": [
+    [
+      "research.train",
+      "--config",
+      "research/configs/A1_anchored_graph.json",
+      "--run-dir",
+      "runs\\check_full"
+    ],
+    [
+      "research.train",
+      "--config",
+      "research/configs/AB1_combined.json",
+      "--run-dir",
+      "runs\\check_full"
+    ],
+    [
+      "research.train",
+      "--config",
+      "research/configs/B0_dinov2_control.json",
+      "--run-dir",
+      "runs\\check_full"
+    ],
+    [
+      "research.train",
+      "--config",
+      "research/configs/B1_partial_labels.json",
+      "--run-dir",
+      "runs\\check_full"
+    ],
+    [
+      "research.train",
+      "--config",
+      "research/configs/coco/A1_anchored_graph.json",
+      "--run-dir",
+      "runs\\check_full"
+    ],
+    [
+      "research.train",
+      "--config",
+      "research/configs/coco/AB1_combined.json",
+      "--run-dir",
+      "runs\\check_full"
+    ],
+    [
+      "research.train",
+      "--config",
+      "research/configs/coco/B0_dinov2_control.json",
+      "--run-dir",
+      "runs\\check_full"
+    ],
+    [
+      "research.train",
+      "--config",
+      "research/configs/coco/B1_partial_labels.json",
+      "--run-dir",
+      "runs\\check_full"
+    ],
+    [
+      "research.train",
+      "--config",
+      "research/configs/coco/D0_no_dino.json",
+      "--run-dir",
+      "runs\\check_full"
+    ],
+    [
+      "research.train",
+      "--config",
+      "research/configs/D0_no_dino.json",
+      "--run-dir",
+      "runs\\check_full"
+    ],
+    [
+      "research.final_evaluate",
+      "--run",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\voc2012",
+      "--out",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\voc2012\\eval",
+      "--checkpoint",
+      "best.pt",
+      "--scales",
+      "0.75",
+      "1.0",
+      "--flip",
+      "--crf",
+      "--recipe",
+      "initial"
+    ],
+    [
+      "research.final_evaluate",
+      "--run",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\voc2012",
+      "--out",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\voc2012\\eval",
+      "--checkpoint",
+      "best.pt",
+      "--scales",
+      "0.7",
+      "1.0",
+      "1.2",
+      "1.5",
+      "--flip",
+      "--crf",
+      "--recipe",
+      "excel_official"
+    ],
+    [
+      "supplementary.cam_eval",
+      "--code-root",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\dasp-full-data\\DASP-main",
+      "--config",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\voc2012\\config.json",
+      "--checkpoint",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\voc2012\\best.pt",
+      "--visual-ids",
+      "research/splits/visual_ids.json",
+      "--out",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\voc2012\\cam",
+      "--ids",
+      "research/splits/train_full.txt",
+      "--family",
+      "ours",
+      "--name",
+      "B1_partial_labels"
+    ],
+    [
+      "supplementary.seg_visual",
+      "--code-root",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\dasp-full-data\\DASP-main",
+      "--config",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\voc2012\\config.json",
+      "--checkpoint",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\voc2012\\best.pt",
+      "--visual-ids",
+      "research/splits/visual_ids.json",
+      "--out",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\voc2012\\visuals"
+    ],
+    [
+      "research.final_evaluate",
+      "--run",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\coco2014",
+      "--out",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\coco2014\\eval",
+      "--checkpoint",
+      "best.pt",
+      "--scales",
+      "0.75",
+      "1.0",
+      "--flip",
+      "--crf",
+      "--recipe",
+      "initial"
+    ],
+    [
+      "research.final_evaluate",
+      "--run",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\coco2014",
+      "--out",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\coco2014\\eval",
+      "--checkpoint",
+      "best.pt",
+      "--scales",
+      "0.7",
+      "1.0",
+      "1.2",
+      "1.5",
+      "--flip",
+      "--crf",
+      "--recipe",
+      "excel_official"
+    ],
+    [
+      "supplementary.cam_eval",
+      "--code-root",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\dasp-full-data\\DASP-main",
+      "--config",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\coco2014\\config.json",
+      "--checkpoint",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\coco2014\\best.pt",
+      "--visual-ids",
+      "research/splits/coco/visual_ids.json",
+      "--out",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\coco2014\\cam",
+      "--ids",
+      "research/splits/coco/train_full.txt",
+      "--family",
+      "ours",
+      "--name",
+      "B1_partial_labels"
+    ],
+    [
+      "supplementary.seg_visual",
+      "--code-root",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\dasp-full-data\\DASP-main",
+      "--config",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\coco2014\\config.json",
+      "--checkpoint",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\coco2014\\best.pt",
+      "--visual-ids",
+      "research/splits/coco/visual_ids.json",
+      "--out",
+      "C:\\Users\\chy\\Documents\\Codex\\2026-10-03\\zh\\work\\launch-audit-5dmfh_bw\\coco2014\\visuals"
+    ]
+  ],
+  "full_voc_training_ids": 10582,
+  "full_voc_validation_ids": 1449,
+  "coco_configured_training_ids": 82783,
+  "coco_configured_validation_ids": 40504,
+  "coco_lists_source": "Generated on the user machine from official instance annotation JSONs; not fabricated or bundled",
+  "training_configs_checked": 10,
+  "gpu_training_or_inference_run": false,
+  "new_full_data_metrics": false,
+  "limitations": [
+    "No dataset RGB images or dense masks bundled",
+    "No pretrained encoder or trained checkpoint weights bundled",
+    "COCO text attribute bank/descriptor JSON absent from original input; must be supplied",
+    "GPU model execution and DenseCRF not exercised locally",
+    "CPU tests used synthetic COCO metadata, not downloaded official annotations",
+    "Shell wrappers inspected and LF-normalized; no Bash runtime available for shell execution"
+  ],
+  "release_id": "DASP-full-data-20261003-v2",
+  "documentation_scope": "Current full-data protocol and pending experiment results only",
+  "method_diagrams_included": [
+    "architecture",
+    "motivation"
+  ],
+  "v2_runtime_ast_unchanged": true,
+  "v2_entire_zip_content_audit": "passed"
+}
