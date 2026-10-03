@@ -1,0 +1,17 @@
+{
+  "status": "not_run_on_full_data",
+  "full_data_results": null,
+  "protocol": {
+    "voc2012": {
+      "train": 10582,
+      "val": 1449,
+      "cam": 10582
+    },
+    "coco2014": {
+      "train": 82783,
+      "val": 40504,
+      "cam": 82783
+    }
+  },
+  "note": "Run the full-data main experiments and all ablations to obtain measurements."
+}

@@ -1,0 +1,7 @@
+{
+  "release_id": "DASP-full-data-20261003-v2",
+  "status": "current_full_data_documentation",
+  "configuration_record": "docs/FULL_DATA_CHANGELOG.md",
+  "validation": "PACKAGE_QA.json",
+  "gpu_training_or_inference_run": false
+}

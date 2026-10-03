@@ -1,0 +1,27 @@
+{
+  "experiment": "R1_B1_excel_inference",
+  "kind": "inference_recipe_for_new_full_data_checkpoint",
+  "source_training_run": "B1_partial_labels",
+  "checkpoint": "best.pt",
+  "scales": [
+    0.7,
+    1.0,
+    1.2,
+    1.5
+  ],
+  "flip_except_base_scale": true,
+  "aggregation": "mean_logits_then_softmax",
+  "position_embedding": "original_frozen_CLIP_interpolated_per_scale",
+  "crf": {
+    "iterations": 10,
+    "pos_xy": 1,
+    "pos_w": 3,
+    "bi_xy": 67,
+    "bi_rgb": 3,
+    "bi_w": 4
+  },
+  "source_repository": "https://github.com/zwyang6/ExCEL",
+  "source_commit": "2cd7f510d62793c76365268a2cc4da7cbe915e4d",
+  "source_file": "tools/infer_seg_voc.py",
+  "claim_scope": "Transferred VOC inference recipe; full-data results must be measured anew. COCO defaults to I0."
+}

@@ -1,0 +1,13 @@
+{
+  "dataset": "voc2012",
+  "selection": "all train_aug images; no sampling",
+  "train_count": 10582,
+  "val_count": 1449,
+  "train_fraction": 1.0,
+  "train_val_overlap": 0,
+  "cam_ids": "train_full.txt",
+  "sha256": {
+    "train_full.txt": "3982de872b06d9b83a955bbfdc15512dbc9b84faf56b67a7b1c3beb330d640e8",
+    "val_full.txt": "8fe3c8ccb47eb4fdabb293cf3a66d6cbe45251f6fe76839230190fbfe2531731"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "release_id": "DASP-full-data-20261003-v2",
+  "status": "passed",
+  "local_readme_links": "checked",
+  "all_examples_full_data": true,
+  "gpu_training_or_inference_run": false,
+  "validation": "PACKAGE_QA.json"
+}
