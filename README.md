@@ -34,24 +34,7 @@ Segmentation mIoU (%) reported in the latest manuscript, with DenseCRF:
 | PASCAL VOC 2012 | CLIP ViT-B/16 + DINOv2 ViT-B/14 | **80.8** | **80.6** |
 | MS COCO 2014 | CLIP ViT-B/16 + DINOv2 ViT-B/14 | **51.6** | — |
 
-**CAM seed quality:** 78.60% mIoU on the 1,464-image official VOC train split, using learned affinity + PAR without DenseCRF.
-
-
-
-### Qualitative Results
-
-Four representative cases from the manuscript. The final prediction column uses I1 + CRF; the CLIP-only, hard-control, and DAPS/SS columns use single-scale inference.
-
-![Segmentation comparisons from the latest manuscript](assets/segmentation.png)
-
-<details>
-<summary><b>CAM seed refinement examples</b></summary>
-
-The same cases are aligned across frozen CAMs, static refinement, the hard control, DAPS, and reference ground truth. These are archived experimental outputs.
-
-![CAM seed comparisons from the latest manuscript](assets/cam_seeds.png)
-
-</details>
+**CAM seed quality:** 78.60% mIoU on the official VOC train split, using learned affinity + PAR without DenseCRF.
 
 ## Data Preparation
 
@@ -183,7 +166,7 @@ python -m research.verify_evaluation \
 
 ### CAM Seed Quality
 
-Evaluate the 1,464-image official VOC train split without DenseCRF:
+Evaluate the official VOC train split without DenseCRF:
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 bash eval_cam.sh runs/DAPS_01 runs/DAPS_01_CAM
